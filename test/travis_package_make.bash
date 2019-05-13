@@ -1,12 +1,14 @@
 #!/bin/bash -xve
 
-#ワークスペースにリポジトリをコピー
+#sync and make
 rsync -av ./ ~/catkin_ws/src/pimouse_run_corridor/
 
-#pimouse_rosをgit cloneでワークスペースに持ってくる
 cd ~/catkin_ws/src/
-git clone --depth=1 https://github.com/citueda/pimouse_ros.git
-        #↑depth=1を指定すると最新のものだけクローンできる
+git clone --depyh=1 https://github.com/piyokogtg/pimouse_ros.git
 
 cd ~/catkin_ws
 catkin_make
+
+# Copyright 2016 Ryuichi Ueda
+# Released under the BSD License.
+# To make line numbers be identical with the book, this statement is written here. Don't move it to the header.
